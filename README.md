@@ -20,6 +20,14 @@ API docs: https://nextrows.com/docs/api
 pip install nextrows-py
 ```
 
+## Development (uv)
+
+```bash
+uv venv
+uv pip install -e ".[test]"
+uv run pytest
+```
+
 ## Quick Start
 
 ```python

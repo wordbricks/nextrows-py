@@ -6,9 +6,10 @@
 - Package name on PyPI: `nextrows-py` (import path `nextrows`).
 
 ## Build and dev commands
-- Install deps: `pip install -e .[test]`
-- Run tests: `pytest`
-- Build package: `python -m build`
+- Create venv: `uv venv`
+- Install deps: `uv pip install -e ".[test]"`
+- Run tests: `uv run pytest`
+- Build package: `uv run python -m build`
 
 ## Code style guidelines
 - Keep modules small and focused; reuse shared helpers in `src/nextrows/api/`.
