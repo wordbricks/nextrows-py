@@ -1,0 +1,171 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.4/schema.json",
+  "root": true,
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useGenericFontNames": "warn",
+        "useButtonType": "warn",
+        "useKeyWithClickEvents": "warn",
+        "useKeyWithMouseEvents": "warn",
+        "useMediaCaption": "warn",
+        "noNoninteractiveTabindex": "warn",
+        "useSemanticElements": "warn",
+        "useFocusableInteractive": "warn",
+        "noStaticElementInteractions": "warn"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noNestedComponentDefinitions": "warn",
+        "useUniqueElementIds": "off",
+        "useExhaustiveDependencies": {
+          "level": "warn",
+          "fix": "none",
+          "options": {}
+        },
+        "noSwitchDeclarations": "warn",
+        "noUnsafeOptionalChaining": "warn",
+        "noUnusedImports": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {}
+        },
+        "noUnknownMediaFeatureName": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      },
+      "style": {
+        "useImportType": "warn",
+        "useSelfClosingElements": "off",
+        "noUnusedTemplateLiteral": "off",
+        "noNonNullAssertion": "warn",
+        "noUselessElse": "off",
+        "useTemplate": "warn",
+        "useShorthandFunctionType": "warn",
+        "useExponentiationOperator": "warn",
+        "noParameterAssign": "warn",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSingleVarDeclarator": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error"
+      },
+      "suspicious": {
+        "noUnknownAtRules": "warn",
+        "noExplicitAny": "warn",
+        "noAssignInExpressions": "warn",
+        "noArrayIndexKey": "warn",
+        "noAsyncPromiseExecutor": "off",
+        "noDuplicateFontNames": "warn",
+        "noFallthroughSwitchClause": "warn",
+        "noControlCharactersInRegex": "warn",
+        "noShadowRestrictedNames": "warn",
+        "noShorthandPropertyOverrides": "off",
+        "noDuplicateProperties": "warn",
+        "useIterableCallbackReturn": "off",
+        "noFocusedTests": {
+          "level": "warn",
+          "fix": "none",
+          "options": {}
+        }
+      },
+      "complexity": {
+        "noForEach": "off",
+        "noStaticOnlyClass": "off",
+        "noBannedTypes": "warn",
+        "noUselessFragments": "off",
+        "noUselessSwitchCase": "warn",
+        "useLiteralKeys": "off",
+        "noArguments": "warn",
+        "noCommaOperator": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn",
+        "noGlobalEval": "warn"
+      },
+      "performance": {
+        "noAccumulatingSpread": "warn"
+      }
+    },
+    "includes": [
+      "**",
+      "!**/.next",
+      "!**/dist",
+      "!**/.react-email",
+      "!**/meta",
+      "!**/.venv",
+      "!**/.wxt",
+      "!**/.turbo"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "enabled": true,
+    "lineWidth": 80,
+    "includes": [
+      "**",
+      "!**/.next",
+      "!**/dist",
+      "!**/.nuxt",
+      "!**/.react-email",
+      "!**/meta",
+      "!**/.venv",
+      "!**/.wxt",
+      "!**/.turbo"
+    ]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "maxSize": 10485760,
+    "includes": [
+      "**",
+      "!**/apps/desktop/src-tauri/**/*.js",
+      "!**/build",
+      "!**/.turbo",
+      "!**/.next",
+      "!**/.output",
+      "!**/.react-email",
+      "!**/.venv",
+      "!**/.wxt",
+      "!**/.turbo",
+      "!**/.temp",
+      "!**/.vercel",
+      "!**/.output",
+      "!**/.wrangler",
+      "!**/generated",
+      "!**/dist",
+      "!**/meta"
+    ]
+  }
+}
