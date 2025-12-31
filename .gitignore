@@ -51,3 +51,5 @@ profile.json.gz
 
 # Egg info
 *.egg-info/
+
+.env
