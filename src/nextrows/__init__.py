@@ -1,4 +1,4 @@
-from nextrows.client import Nextrows, NextrowsOptions
+from nextrows.client import AsyncNextrows, Nextrows, NextrowsOptions
 from nextrows.types import (
     AppCellValue,
     AppInput,
@@ -29,6 +29,7 @@ __all__ = [
     "ExtractType",
     "GetCreditsResponse",
     "JsonSchema",
+    "AsyncNextrows",
     "Nextrows",
     "NextrowsOptions",
     "RunAppJsonRequest",

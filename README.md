@@ -1,4 +1,4 @@
-# nextrows
+# nextrows-py
 
 Python client for the Nextrows Open API.
 
@@ -17,7 +17,7 @@ API docs: https://nextrows.com/docs/api
 ## Installation
 
 ```bash
-pip install nextrows
+pip install nextrows-py
 ```
 
 ## Quick Start
@@ -50,7 +50,7 @@ if result["success"]:
 Install pydantic and pass a model or schema object. The client converts it to JSON Schema.
 
 ```bash
-pip install "nextrows[schema]"
+pip install "nextrows-py[schema]"
 ```
 
 ```python
@@ -70,6 +70,24 @@ result = client.extract(
         "schema": Product,
     }
 )
+```
+
+### Async Client
+
+```bash
+pip install \"nextrows-py[async]\"
+```
+
+```python
+import asyncio
+from nextrows import AsyncNextrows
+
+async def main() -> None:
+    async with AsyncNextrows(api_key=\"sk-nr-your-api-key\") as client:
+        result = await client.get_credits()
+        print(result)
+
+asyncio.run(main())
 ```
 
 ### Run App (JSON)

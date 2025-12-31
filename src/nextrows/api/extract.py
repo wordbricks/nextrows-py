@@ -24,17 +24,19 @@ def _convert_schema(schema: ExtractSchema) -> JsonSchema:
     )
 
 
+def build_extract_payload(request: ExtractRequest) -> Dict[str, Any]:
+    if "schema" in request and request["schema"] is not None:
+        return {**request, "schema": _convert_schema(request["schema"])}
+    return dict(request)
+
+
 def extract(
     session: requests.Session,
     base_url: str,
     request: ExtractRequest,
     timeout: float,
 ) -> ExtractResponse:
-    payload: Dict[str, Any]
-    if "schema" in request and request["schema"] is not None:
-        payload = {**request, "schema": _convert_schema(request["schema"])}
-    else:
-        payload = dict(request)
+    payload = build_extract_payload(request)
 
     response = session.post(f"{base_url}/v1/extract", json=payload, timeout=timeout)
     response.raise_for_status()
